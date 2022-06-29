@@ -1,10 +1,16 @@
-import os
+'''
+Praat의 TextGrid File에서 각 word의 duration 출력, 이후 총 길이 도출
+'''
 
+import os #file_list 만들기 위해 import
+
+# 파일 여는 함수
 def fileopen(f):
     file = open(f,'r')
-    global data
+    global data # data변수를 함수 외부에서 사용하기 위해, global 선언
     data = file.read()
 
+# word duration 함수
 def word_duration (file_list, sen):
     count = 1
     for filename in file_list:
@@ -18,7 +24,7 @@ def word_duration (file_list, sen):
             for d in data_list:
                 if d == '"'+word+'"':
                     i = data_list.index(d)
-                    dur = float(data_list[i-3])-float(data_list[i-5])
+                    dur = float(data_list[i-3])-float(data_list[i-6])
                     total = total + dur
                     print("duration of words", d, round(dur,3))
         
@@ -31,6 +37,10 @@ def file_lister(p):
     file_list = file_list_textgrid
     return file_list
 
+
 sen = "push the button"
-file_list = file_lister("C:/Users/sangw/Desktop/DataCampus/Introduction_to_Language_Technology")
+path = r'C:\Users\sangw\Desktop\DataCampus\Introduction_to_Language_Technology'
+
+os.chdir(path)
+file_list = file_lister(path)
 word_duration(file_list, sen)
