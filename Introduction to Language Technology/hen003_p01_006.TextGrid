@@ -1,0 +1,52 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 10.008004535147393 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 10.008004535147393 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4482391481125192 
+            text = "sil" 
+        intervals [2]:
+            xmin = 1.4482391481125192 
+            xmax = 1.704785799173488 
+            text = "push" 
+        intervals [3]:
+            xmin = 1.704785799173488 
+            xmax = 1.8525167312803226 
+            text = "the" 
+        intervals [4]:
+            xmin = 1.8525167312803226 
+            xmax = 2.1685993714339036 
+            text = "button" 
+        intervals [5]:
+            xmin = 2.1685993714339036 
+            xmax = 10.008004535147393 
+            text = "sil" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "sen" 
+        xmin = 0 
+        xmax = 10.008004535147393 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4482391481125192 
+            text = "<s>" 
+        intervals [2]:
+            xmin = 1.4482391481125192 
+            xmax = 2.1685993714339036 
+            text = "push the button" 
+        intervals [3]:
+            xmin = 2.1685993714339036 
+            xmax = 10.008004535147393 
+            text = "</s>" 
