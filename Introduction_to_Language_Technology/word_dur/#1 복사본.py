@@ -1,6 +1,6 @@
 '''
-Praat의 TextGrid File에서 각 word의 duration 출력, 이후 총 길이 도출
-index 활용해 특정 word의 시간 정보 찾아, 계산 후 출력
+언어 구사능력이 높을수록, functional word에 강조를 주지 않는 경향이 있다.
+강조 할 수록 그 단어를 길게 발음하므로, 이를 참고하여 세 Speaker의 fluency를 rank해보자. 
 '''
 
 import os #file_list 만들기 위해 import
@@ -41,7 +41,7 @@ def processPrint (file_list, sen):
         count = count + 1
 
 sen = "push the button"
-path = r'C:\Users\sangw\Desktop\DataCampus\Introduction_to_Language_Technology'
+path = r'C:\Users\sangw\Desktop\DataCampus\Introduction_to_Language_Technology\word_dur'
 
 os.chdir(path)
 file_list = file_lister(path)
